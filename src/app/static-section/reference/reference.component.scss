@@ -1,0 +1,50 @@
+:host {
+  width: fit-content;
+  padding: 0.3rem;
+
+  cursor: pointer;
+
+  .reference {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.5rem;
+
+    text-decoration: none;
+
+    & > .description {
+      font-weight: bold;
+
+      color: #838384;
+    }
+
+    & > .bar {
+      width: 60px;
+      height: 2px;
+
+      transition: width 0.5s;
+
+      background-color: #838384;
+    }
+
+    & > .active-description {
+      color: #ffffff;
+    }
+
+    & > .active-bar {
+      background-color: #ffffff;
+    }
+  }
+
+  &:hover {
+
+    .reference {
+
+      & > .bar {
+        width: 85px;
+
+        transition: width 0.5s;
+      }
+    }
+  }
+}
