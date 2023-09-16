@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+}
+
+@media screen and (min-width: 990px) {
+  :host {
+    flex-direction: row;
+
+    & > * {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 989px) {
+  :host {
+    flex-direction: column;
+
+    & > * {
+      width: 100%;
+    }
+  }
+}
