@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+const references: string[] = ["Projects", "Skills", "Education", "Contact"];
+
 @Component({
   selector: 'app-static-section',
   templateUrl: './static-section.component.html',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class StaticSectionComponent {
 
+  protected readonly references = references;
 }
