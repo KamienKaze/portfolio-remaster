@@ -2,11 +2,17 @@
   <h1 class="text">Michał Kamiński</h1>
   <h2 class="text">Frontend Developer</h2>
 </div>
-<p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-  commodo consequat.</p>
+<p class="subtext">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>
 <div class="references">
-  <app-reference *ngFor="let reference of references; let i = index"
-  [isActive]="false" [referenceId]="i" [referenceName]="reference"/>
+  <app-reference
+    *ngFor="let reference of references; let i = index"
+    [isActive]="false"
+    [referenceId]="i"
+    [referenceName]="reference"
+  />
 </div>
-<img src="./assets/gifs/cube.gif" alt="spinning-cube-gif">
+<img src="./assets/gifs/cube.gif" alt="spinning-cube-gif" />

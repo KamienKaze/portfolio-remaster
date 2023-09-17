@@ -1,7 +1,9 @@
-<div class="reference"
-     [ngClass]='isActive ? "active" : "not-active"'
-     (click)="changeIsActiveState()">
-  <div class="description">0{{referenceId + 1}}</div>
+<div
+  class="reference"
+  [ngClass]="isActive ? 'active' : 'not-active'"
+  (click)="changeIsActiveState()"
+>
+  <div class="description">0{{ referenceId + 1 }}</div>
   <div class="bar"></div>
-  <div class="description">{{referenceName | titlecase}}</div>
+  <div class="description">{{ referenceName | titlecase }}</div>
 </div>
