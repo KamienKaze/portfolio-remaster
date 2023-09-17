@@ -1,6 +1,5 @@
 :host {
   width: fit-content;
-  padding: 0.3rem;
 
   cursor: pointer;
 
@@ -10,41 +9,51 @@
     align-items: center;
     column-gap: 0.5rem;
 
+    padding: 0.3rem;
+
     text-decoration: none;
 
     & > .description {
       font-weight: bold;
-
-      color: #838384;
     }
 
     & > .bar {
-      width: 60px;
       height: 2px;
-
-      transition: width 0.5s;
-
-      background-color: #838384;
     }
 
-    & > .active-description {
+    &:hover {
+      & > .bar {
+        transition: all 0.5s;
+        width: 80px;
+      }
+    }
+  }
+
+  .active {
+    & > .description {
+      transition: all 0.5s;
       color: #ffffff;
     }
 
-    & > .active-bar {
+    & > .bar {
+      transition: all 0.5s;
+      width: 80px;
+
       background-color: #ffffff;
     }
   }
 
-  &:hover {
+  .not-active {
+    & > .description {
+      transition: all 0.5s;
+      color: #838384;
+    }
 
-    .reference {
+    & > .bar {
+      transition: all 0.5s;
+      width: 60px;
 
-      & > .bar {
-        width: 85px;
-
-        transition: width 0.5s;
-      }
+      background-color: #838384;
     }
   }
 }
