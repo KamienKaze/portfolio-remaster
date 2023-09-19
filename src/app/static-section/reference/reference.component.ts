@@ -10,6 +10,8 @@ export class ReferenceComponent {
   @Input('referenceId') public referenceId: number = 0;
   @Input('referenceName') public referenceName: string = 'not-assigned';
 
+  private none = 0;
+
   public changeIsActiveState(): void {
     this.isActive = !this.isActive;
   }
