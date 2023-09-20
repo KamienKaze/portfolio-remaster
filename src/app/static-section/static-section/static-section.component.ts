@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-import { ReferenceComponent } from '../reference/reference.component';
-
-export enum References {
-  Projects = 'Projects',
-  Skills = 'Skills',
-  Education = 'Education',
-  Contact = 'Contact',
-}
+import { References } from '../references';
 
 @Component({
   selector: 'app-static-section',
@@ -21,7 +14,7 @@ export class StaticSectionComponent {
     this.activeReference = newActiveReference;
   }
 
-  public sortingFunction(): number {
+  public ngForSortPrevention(): number {
     return 0;
   }
 }

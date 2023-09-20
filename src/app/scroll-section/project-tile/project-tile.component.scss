@@ -1,0 +1,68 @@
+:host {
+  display: flex;
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+
+    background-color: #202022;
+
+    width: calc(100% - 2 * 3rem);
+    height: 10rem;
+
+    padding: 1.2rem 3rem 1.2rem 3rem;
+
+    text-decoration: none;
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    & > .project-technology {
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 0.2rem;
+    }
+
+    & > .project-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+@media screen and (min-width: 990px) {
+  :host {
+    .project {
+      align-items: flex-start;
+
+      & > .project-name {
+
+        .owner {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 989px) {
+  :host {
+    .project {
+      align-items: center;
+      text-align: center;
+
+      & > .project-name {
+
+        .owner {
+          display: none;
+        }
+      }
+    }
+  }
+}

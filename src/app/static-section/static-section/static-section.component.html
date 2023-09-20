@@ -8,7 +8,7 @@
   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </p>
 <div class="references">
-  <app-reference *ngFor="let reference of references | keyvalue: sortingFunction; let i = index"
+  <app-reference *ngFor="let reference of references | keyvalue: ngForSortPrevention; let i = index"
                  [referenceId]="i"
                  [referenceName]="reference.key"
                  [isActive]="activeReference == reference.value"
