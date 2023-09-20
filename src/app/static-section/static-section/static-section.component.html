@@ -8,11 +8,8 @@
   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </p>
 <div class="references">
-  <app-reference
-    *ngFor="let reference of references; let i = index"
-    [isActive]="false"
-    [referenceId]="i"
-    [referenceName]="reference"
-  />
+  <app-reference *ngFor="let reference of REFERENCE_NAMES; let i = index"
+                 [referenceId]="i"
+                 [referenceName]="reference"/>
 </div>
-<img src="./assets/gifs/cube.gif" alt="spinning-cube-gif" />
+<img src="./assets/gifs/cube.gif" alt="spinning-cube-gif"/>

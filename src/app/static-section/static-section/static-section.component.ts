@@ -1,6 +1,16 @@
 import { Component } from '@angular/core';
+import { ReferenceComponent } from '../reference/reference.component';
 
-const references: string[] = ['Projects', 'Skills', 'Education', 'Contact'];
+enum References {
+  Projects = 'Projects',
+  Skills = 'Skills',
+  Education = 'Education',
+  Contact = 'Contact',
+}
+
+const REFERENCE_NAMES: string[] = Object.keys(References).filter((v: string) =>
+  isNaN(Number(v)),
+);
 
 @Component({
   selector: 'app-static-section',
@@ -8,5 +18,5 @@ const references: string[] = ['Projects', 'Skills', 'Education', 'Contact'];
   styleUrls: ['./static-section.component.scss'],
 })
 export class StaticSectionComponent {
-  protected readonly references = references;
+  protected readonly REFERENCE_NAMES = REFERENCE_NAMES;
 }

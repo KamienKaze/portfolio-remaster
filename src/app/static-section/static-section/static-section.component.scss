@@ -29,5 +29,25 @@
   & > img {
     align-self: center;
     width: 50%;
+
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  :host {
+    .references {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 989px) {
+  :host {
+    .references {
+      display: none;
+    }
   }
 }
