@@ -8,11 +8,10 @@
   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </p>
 <div class="references">
-  <app-reference *ngFor="let reference of references | keyvalue; let i = index"
+  <app-reference *ngFor="let reference of references | keyvalue: sortingFunction; let i = index"
                  [referenceId]="i"
                  [referenceName]="reference.key"
                  [isActive]="activeReference == reference.value"
-                 (click)="onReferenceClick(reference.value)"
-  />
+                 (click)="onReferenceClick(reference.value)" />
 </div>
-<img src="./assets/gifs/cube.gif" alt="spinning-cube-gif"/>
+<img src="./assets/gifs/cube.gif" alt="spinning-cube-gif" />

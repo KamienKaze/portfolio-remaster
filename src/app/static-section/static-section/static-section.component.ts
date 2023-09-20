@@ -15,10 +15,13 @@ export enum References {
 })
 export class StaticSectionComponent {
   protected readonly references = References;
-  public activeReference: References | null = null;
+  public activeReference: References = References.Projects;
 
   public onReferenceClick(newActiveReference: References): void {
     this.activeReference = newActiveReference;
-    console.log(this.activeReference);
+  }
+
+  public sortingFunction(): number {
+    return 0;
   }
 }
