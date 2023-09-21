@@ -1,3 +1,7 @@
 <div class="projects">
-  <app-project-tile *ngFor="let project of projects" [project]="project" />
+  <app-project-tile *ngFor="let project of projects"
+                    [project]="project"
+                    (mouseenter)="mouseOverTile(project)"
+                    (mouseleave)="mouseLeaveTile()"
+                    [ngClass]="hoveredTile != null && hoveredTile != project ? 'faded-out' : 'faded-in'"/>
 </div>

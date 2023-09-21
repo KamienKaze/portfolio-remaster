@@ -1,4 +1,18 @@
 :host {
+
+
+  .faded-out {
+    filter: brightness(0.5);
+    transition: all 0.5s;
+    z-index: -1;
+  }
+
+  .faded-in {
+    filter: brightness(1);
+    transition: all 0.5s;
+    z-index: 1;
+  }
+
   .projects {
     display: flex;
     flex-direction: column;
