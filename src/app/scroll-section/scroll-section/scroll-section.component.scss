@@ -3,19 +3,19 @@
 
   .faded-out {
     filter: brightness(0.5);
-    transition: all 0.5s;
+    transition: all 0.3s;
     z-index: -1;
   }
 
   .faded-in {
     filter: brightness(1);
-    transition: all 0.5s;
+    transition: all 0.3s;
     z-index: 1;
   }
 
   .projects {
     display: flex;
     flex-direction: column;
-    row-gap: 0.4rem;
+    row-gap: 0.3rem;
   }
 }
