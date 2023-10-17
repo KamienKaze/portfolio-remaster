@@ -11,6 +11,28 @@ import { References } from '../../shared/references';
 })
 export class ScrollSectionComponent {
   public readonly projects: Project[] = projects;
+  protected readonly References = References;
 
-  public activeSection: References = References.Projects;
+  private hoveredSection: References | null = null;
+  private hoveredTile: Project | null = null;
+
+  public setHoveredSection(reference: References | null): void {
+    this.hoveredSection = reference;
+  }
+
+  public setHoveredTile(hoveredTile: typeof this.hoveredTile): void {
+    this.hoveredTile = hoveredTile;
+  }
+
+  public getIsFadedOut(
+    currentSection: References,
+    thisTile: typeof this.hoveredTile,
+  ): string {
+    if (
+      this.hoveredSection === currentSection &&
+      this.hoveredTile != thisTile
+    ) {
+      return 'faded-out';
+    } else return 'faded-in';
+  }
 }

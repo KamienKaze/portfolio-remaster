@@ -1,4 +1,7 @@
-<div class="projects">
+<div class="projects" (mouseenter)="setHoveredSection(References.Projects)"
+                      (mouseleave)="setHoveredSection(null)">
   <app-project-tile *ngFor="let project of projects"
-                    [project]="project"/>
+                    [project]="project"
+                    [ngClass]="getIsFadedOut(References.Projects, project)"
+                    (mouseenter)="setHoveredTile(project)" />
 </div>
