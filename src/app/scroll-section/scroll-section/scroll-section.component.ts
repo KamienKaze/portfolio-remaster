@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { Project } from '../types';
 import { projects } from '../projects';
+import { References } from '../../shared/references';
 
 @Component({
   selector: 'app-scroll-section',
@@ -11,13 +12,5 @@ import { projects } from '../projects';
 export class ScrollSectionComponent {
   public readonly projects: Project[] = projects;
 
-  public hoveredTile: Project | null = null;
-
-  public mouseOverTile(hoveredTile: Project): void {
-    this.hoveredTile = hoveredTile;
-  }
-
-  public mouseLeaveTile(): void {
-    this.hoveredTile = null;
-  }
+  public activeSection: References = References.Projects;
 }

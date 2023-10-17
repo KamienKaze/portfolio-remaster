@@ -8,7 +8,7 @@
   }
 
   .faded-in {
-    filter: brightness(1);
+    filter: brightness(1) !important;
     transition: all 0.3s;
     z-index: 1;
   }

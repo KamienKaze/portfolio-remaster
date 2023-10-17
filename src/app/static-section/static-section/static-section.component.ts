@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { References } from '../references';
+
+import { References } from '../../shared/references';
 
 @Component({
   selector: 'app-static-section',
